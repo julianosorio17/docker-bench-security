@@ -31,3 +31,7 @@ steps:
       echo 'Hello world'
       
       pwd
+
+      docker -v
+
+      docker ps -a
