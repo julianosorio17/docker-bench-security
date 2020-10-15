@@ -25,10 +25,12 @@ steps:
 - task: Docker@2
   inputs:
     command: 'run'
-    arguments: '-dit alpine /bin/ash'
+    arguments: '-dit --name alpine alpine /bin/ash'
 
 - task: CmdLine@2
   inputs:
     script: |
       sleep 10s
+      docker ps -a
+      sleep 15s
       docker ps -a
