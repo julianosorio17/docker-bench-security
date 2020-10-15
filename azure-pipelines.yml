@@ -24,16 +24,7 @@ steps:
       echo %cd%
       
       pwd
-- task: Bash@3
+- task: Docker@2
   inputs:
-    targetType: 'inline'
-    script: |
-      # Write your commands here
-      
-      echo 'Hello world'
-      
-      pwd
-
-      docker -v
-
-      docker ps -a
+    command: 'run'
+    arguments: 'hello-world'
