@@ -20,14 +20,12 @@ steps:
       docker -v
 
       docker ps -a
-
-      echo %cd%
       
       pwd
 - task: Docker@2
   inputs:
     command: 'run'
-    arguments: '-dit /bin/ash alpine'
+    arguments: '-dit alpine /bin/ash'
 
 - task: CmdLine@2
   inputs:
