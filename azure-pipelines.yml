@@ -27,7 +27,7 @@ steps:
 - task: Docker@2
   inputs:
     command: 'run'
-    arguments: 'hello-world'
+    arguments: '-dit /bin/ash alpine'
 
 - task: CmdLine@2
   inputs:
